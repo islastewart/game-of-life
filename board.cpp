@@ -16,7 +16,7 @@ Board::Board(int w, int h) {
     width = w;
     height = h;
     // Initialise empty vector of dead cells of appropriate length
-    Cell empty = Cell();
+    Cell empty = Cell(this);
     cout << empty.to_string();
 
     cells = vector<Cell>((width * height), empty);

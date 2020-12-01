@@ -8,8 +8,9 @@ Defines functionality of cells
 using namespace std;
 
 
-Cell::Cell() {
+Cell::Cell(Board *b) {
     alive = false;
+    board = b;
 };
 
 string Cell::to_string() {
