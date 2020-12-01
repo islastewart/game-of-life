@@ -21,8 +21,7 @@ Board::Board(int w, int h) {
     cout << "Board init as " << width << "x" << height << "\n";
 
     for(int i = 0; i < width * height; i++) {
-        add_cell(Cell(this));
-        cout << "added";
+        new_cell();
     }
 };
 
@@ -37,12 +36,15 @@ void Board::print() {
             cout << "\n";
         }
     }
+    cout << "\n";
 }
 
-void Board::add_cell(Cell c) {
+// Add cell to board, set the cell's coords
+void Board::new_cell() {
+    Cell c = Cell(this);
     int size = cells.size();
 
-    int x = size % height;
+    int x = size % width;
     int y = size / width;
 
     c.setX(x);
@@ -50,4 +52,29 @@ void Board::add_cell(Cell c) {
 
     cells.resize(size + 1);
     cells[size] = c;
+}
+
+Cell *Board::get_cell(int x, int y) {
+    // Boundary Check
+    if(x < 0 || x >= width) {
+        return nullptr;
+    }
+
+    if(y < 0 || y >= height) {
+        return nullptr;
+    }
+
+    return &(cells[y * width + x]);
+}
+
+void Board::set_all(bool alive) {
+    for(Cell &c : cells) {
+        c.alive = alive;
+    }
+}
+
+void Board::update() {
+    for(Cell &c : cells) {
+        c.setAlive(c.next());
+    }
 }

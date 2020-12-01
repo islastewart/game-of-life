@@ -23,9 +23,14 @@ class Board {
         // the game of life.
         void update();
 
+        // Get cell at coord, or return null if doesn't exist
+        Cell *get_cell(int x, int y);
+
+        // Set alive status of all cells
+        void set_all(bool alive);
     private:
         // Add cell to board
-        void add_cell(Cell c);
+        void new_cell();
 };
 
 #endif
