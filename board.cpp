@@ -16,12 +16,14 @@ Board::Board(int w, int h) {
     width = w;
     height = h;
     // Initialise empty vector of dead cells of appropriate length
-    Cell empty = Cell(this);
-    cout << empty.to_string();
-
-    cells = vector<Cell>((width * height), empty);
+    cells = vector<Cell>();
 
     cout << "Board init as " << width << "x" << height << "\n";
+
+    for(int i = 0; i < width * height; i++) {
+        add_cell(Cell(this));
+        cout << "added";
+    }
 };
 
 // Generate and print the board.
@@ -35,4 +37,17 @@ void Board::print() {
             cout << "\n";
         }
     }
+}
+
+void Board::add_cell(Cell c) {
+    int size = cells.size();
+
+    int x = size % height;
+    int y = size / width;
+
+    c.setX(x);
+    c.setY(y);
+
+    cells.resize(size + 1);
+    cells[size] = c;
 }

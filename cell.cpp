@@ -20,3 +20,30 @@ string Cell::to_string() {
         return "0";
     };
 };
+
+void Cell::setX(int coord) {
+    if(!coords_set) {
+        x = coord;
+        coords_set = true;
+    }
+}
+
+void Cell::setY(int coord) {
+    if(!coords_set) {
+        y = coord;
+        coords_set = true;
+    }   
+}
+
+bool Cell::next() {
+    // Process the game of life rules one by one
+
+    /*
+    Any live cell with two or three live neighbours survives.
+    Any dead cell with three live neighbours becomes a live cell.
+    All other live cells die in the next generation. Similarly, all other dead cells stay dead.
+    */
+   return false;
+
+
+}

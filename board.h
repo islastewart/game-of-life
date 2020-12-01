@@ -22,6 +22,10 @@ class Board {
         // Update the board and execute the rules associated with
         // the game of life.
         void update();
+
+    private:
+        // Add cell to board
+        void add_cell(Cell c);
 };
 
 #endif
