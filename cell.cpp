@@ -49,18 +49,27 @@ bool Cell::next() {
     // Process the game of life rules one by one
 
     /*
-    Any live cell with two or three live neighbours survives.
-    Any dead cell with three live neighbours becomes a live cell.
-    All other live cells die in the next generation. Similarly, all other dead cells stay dead.
+    Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+    Any live cell with two or three live neighbours lives on to the next generation.
+    Any live cell with more than three live neighbours dies, as if by overpopulation.
+    Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
     */
    int num_neighbours = this->num_adj();
 
-   if(num_neighbours == 3) {
-       return true; // All cells that have three neighbours will become or stay live.
-    } else if(num_neighbours == 2 && this->alive) {
-        return true; // All ALIVE cells with 2 neighbours also survives
-    } else {
-       return false; // All other cells die or stay dead.
+   if(this->alive) {
+       if(num_neighbours < 2) {
+           return false;
+       } else if(num_neighbours == 2 || num_neighbours == 3) {
+           return true;
+       } else {
+           return false;
+       }
+   } else {
+       if(num_neighbours == 3) {
+           return true;
+       } else {
+           return false;
+       }
    }
 }
 
@@ -73,6 +82,7 @@ int Cell::num_adj() {
     int count = 0;
     for(Direction d = Direction::North; d != Direction::END; ++d) {
         Cell *adj = get_adj(d);
+
 
         if(adj != nullptr) {
           if(get_adj(d)->alive) {

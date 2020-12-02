@@ -74,7 +74,16 @@ void Board::set_all(bool alive) {
 }
 
 void Board::update() {
-    for(Cell &c : cells) {
-        c.setAlive(c.next());
+    // Create empty copy of cells array 
+    vector<Cell> cellsTemp = cells;
+    for(int i = 0; i < cells.size(); i++) {
+        Cell original_cell = cells[i];
+        bool next_state = original_cell.next();
+
+        // Update in copy
+        cellsTemp[i].alive = next_state;
     }
+
+    // Move over
+    this->cells = cellsTemp;
 }
