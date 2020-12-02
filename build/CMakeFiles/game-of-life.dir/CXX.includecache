@@ -1,0 +1,306 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/isla/Visual Studio Projects/game-of-life/board.cpp
+cell.cpp
+/home/isla/Visual Studio Projects/game-of-life/cell.cpp
+board.h
+/home/isla/Visual Studio Projects/game-of-life/board.h
+vector
+-
+string
+-
+iostream
+-
+include/taskflow/taskflow.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/taskflow.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/board.h
+vector
+-
+cell.h
+/home/isla/Visual Studio Projects/game-of-life/cell.h
+
+/home/isla/Visual Studio Projects/game-of-life/cell.cpp
+string
+-
+cell.h
+/home/isla/Visual Studio Projects/game-of-life/cell.h
+board.h
+/home/isla/Visual Studio Projects/game-of-life/board.h
+
+/home/isla/Visual Studio Projects/game-of-life/cell.h
+string
+-
+direction.h
+/home/isla/Visual Studio Projects/game-of-life/direction.h
+
+/home/isla/Visual Studio Projects/game-of-life/direction.h
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/algorithm/for_each.hpp
+../executor.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/executor.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/algorithm/reduce.hpp
+../executor.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/executor.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/algorithm/sort.hpp
+../executor.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/executor.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/declarations.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/error.hpp
+iostream
+-
+sstream
+-
+exception
+-
+../utility/stream.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/stream.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/executor.hpp
+observer.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/observer.hpp
+taskflow.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/taskflow.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/flow_builder.hpp
+task.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/task.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/graph.hpp
+error.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/error.hpp
+declarations.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/declarations.hpp
+../utility/iterator.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/iterator.hpp
+../utility/object_pool.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/object_pool.hpp
+../utility/traits.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/traits.hpp
+../utility/singleton.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/singleton.hpp
+../utility/uuid.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/uuid.hpp
+../utility/os.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/os.hpp
+../utility/math.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/math.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/notifier.hpp
+iostream
+-
+vector
+-
+cstdlib
+-
+cstdio
+-
+atomic
+-
+memory
+-
+deque
+-
+mutex
+-
+condition_variable
+-
+thread
+-
+algorithm
+-
+numeric
+-
+cassert
+-
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/observer.hpp
+task.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/task.hpp
+worker.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/worker.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/semaphore.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/task.hpp
+graph.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/graph.hpp
+semaphore.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/semaphore.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/taskflow.hpp
+stack
+-
+flow_builder.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/flow_builder.hpp
+topology.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/topology.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/topology.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/tsq.hpp
+atomic
+-
+vector
+-
+cassert
+-
+cstdint
+-
+cstddef
+-
+cstdlib
+-
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/worker.hpp
+declarations.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/declarations.hpp
+tsq.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/tsq.hpp
+notifier.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/notifier.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/taskflow.hpp
+core/executor.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/executor.hpp
+core/algorithm/for_each.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/algorithm/for_each.hpp
+core/algorithm/reduce.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/algorithm/reduce.hpp
+core/algorithm/sort.hpp
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/core/algorithm/sort.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/iterator.hpp
+type_traits
+-
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/math.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/object_pool.hpp
+thread
+-
+atomic
+-
+mutex
+-
+vector
+-
+cassert
+-
+cstddef
+-
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/os.hpp
+cstdlib
+-
+cstdio
+-
+string
+-
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/singleton.hpp
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/stream.hpp
+iostream
+-
+string
+-
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/traits.hpp
+type_traits
+-
+iterator
+-
+iostream
+-
+fstream
+-
+mutex
+-
+stack
+-
+queue
+-
+vector
+-
+algorithm
+-
+memory
+-
+atomic
+-
+thread
+-
+future
+-
+functional
+-
+unordered_map
+-
+unordered_set
+-
+sstream
+-
+list
+-
+forward_list
+-
+numeric
+-
+random
+-
+iomanip
+-
+cassert
+-
+cmath
+-
+cstring
+-
+variant
+-
+optional
+-
+any
+-
+
+/home/isla/Visual Studio Projects/game-of-life/include/taskflow/utility/uuid.hpp
+iostream
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+cstddef
+-
+random
+-
+chrono
+-
+
+/home/isla/Visual Studio Projects/game-of-life/main.cpp
+iostream
+-
+board.cpp
+/home/isla/Visual Studio Projects/game-of-life/board.cpp
+stdlib.h
+-
+direction.h
+/home/isla/Visual Studio Projects/game-of-life/direction.h
+thread
+-
+chrono
+-
+

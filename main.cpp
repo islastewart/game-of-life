@@ -4,18 +4,37 @@
 #include "direction.h"
 #include <thread>         // std::this_thread::sleep_for
 #include <chrono>         // std::chrono::seconds
-#include <task
+
 using namespace std;
 
+class Coord {
+    public:
+        int x;
+        int y;
+
+        Coord(int a, int b) {
+            x = a;
+            y = b;
+        };
+};
+
 int main() {
-    Board b = Board(100, 50);
+    Board b = Board(100, 40);
 
     b.set_all(false);
-    b.get_cell(50,25)->setAlive(true);
-    b.get_cell(49,25)->setAlive(true);
-    b.get_cell(50,26)->setAlive(true);
-    b.get_cell(50,24)->setAlive(true);
-    b.get_cell(51,24)->setAlive(true);
+
+    Coord c[] = {
+        Coord(5,5),
+        Coord(6,5),
+        Coord(7,5),
+        Coord(7,4),
+        Coord(6,3)
+    };
+
+    for(Coord coord : c) {
+        b.get_cell(coord.x, coord.y)->setAlive(true);
+    }
+
     b.print();
 
     cout << b.get_cell(4,4)->num_adj() << "\n";
@@ -25,12 +44,11 @@ int main() {
     this_thread::sleep_for(10s);
 
     while(true) {
-
+        cout << "------------------------------------\n";
         b.update();
         b.print();
-
-        this_thread::sleep_for(0.2s);
     }
 
     return 0;
+    
 }

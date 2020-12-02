@@ -9,6 +9,7 @@ This will have helper methods for the board, incl rendering
 #include <vector>
 #include <string>
 #include <iostream>
+#include "include/taskflow/taskflow.hpp"
 
 using namespace std;
 
@@ -54,17 +55,30 @@ void Board::new_cell() {
     cells[size] = c;
 }
 
-Cell *Board::get_cell(int x, int y) {
-    // Boundary Check
-    if(x < 0 || x >= width) {
-        return nullptr;
+Cell *Board::get_cell(const int x, const int y) {
+    // Wrap around if it goes negative
+
+    int new_x;
+    int new_y;
+
+    // For some reason the moduluo function didn't work for negative numbers?
+    if(x < 0) {
+        new_x = width + x;
+    } else if(x >= width) {
+        new_x = x - width;
+    } else {
+        new_x = x;
     }
 
-    if(y < 0 || y >= height) {
-        return nullptr;
+    if(y < 0) {
+        new_y = height + y;
+    } else if(y >= height) {
+        new_y = y - height;
+    } else {
+        new_y = y;
     }
 
-    return &(cells[y * width + x]);
+    return &(cells[new_y * width + new_x]);
 }
 
 void Board::set_all(bool alive) {
@@ -73,17 +87,38 @@ void Board::set_all(bool alive) {
     }
 }
 
-void Board::update() {
-    // Create empty copy of cells array 
-    vector<Cell> cellsTemp = cells;
-    for(int i = 0; i < cells.size(); i++) {
-        Cell original_cell = cells[i];
-        bool next_state = original_cell.next();
 
-        // Update in copy
-        cellsTemp[i].alive = next_state;
+void Board::update() {
+    vector<Cell> cells_temp = cells;
+
+    for(int i = 0; i < cells.size(); i++) {
+        cells_temp[i].alive = this->cells[i].next();
     }
+
+    cells = cells_temp;
+}
+
+/*
+void Board::update() {
+    tf::Taskflow taskflow; // Create a taskflow
+
+    vector<Cell> cellsTemp = cells; // Create empty copy of cells array 
+
+    tf::Task tasks[height * width]; // We're gonna make one task for each cell.
+    
+    
+    for(int i = 0; i < cells.size(); i++) {
+        // Create lambdas, one for each cell.
+
+        auto task = [&cellsTemp, this, i] { cellsTemp[i].alive = this->cells[i].next(); };
+        tasks[i] = taskflow.emplace(task);
+    }
+
+    tf::Executor executor;
+
+    executor.run(taskflow);
+    executor.wait_for_all();
 
     // Move over
     this->cells = cellsTemp;
-}
+}*/

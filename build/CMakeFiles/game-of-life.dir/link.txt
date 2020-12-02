@@ -1,0 +1,1 @@
+/bin/g++-9  -g  -rdynamic CMakeFiles/game-of-life.dir/main.cpp.o  -o game-of-life 

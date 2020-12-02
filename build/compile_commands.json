@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/isla/Visual Studio Projects/game-of-life/build",
+  "command": "/bin/g++-9    -g   -std=gnu++17 -o CMakeFiles/game-of-life.dir/main.cpp.o -c \"/home/isla/Visual Studio Projects/game-of-life/main.cpp\"",
+  "file": "/home/isla/Visual Studio Projects/game-of-life/main.cpp"
+}
+]

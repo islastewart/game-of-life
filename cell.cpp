@@ -83,7 +83,6 @@ int Cell::num_adj() {
     for(Direction d = Direction::North; d != Direction::END; ++d) {
         Cell *adj = get_adj(d);
 
-
         if(adj != nullptr) {
           if(get_adj(d)->alive) {
                 count++;
