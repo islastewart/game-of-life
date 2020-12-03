@@ -44,7 +44,6 @@ int main() {
     this_thread::sleep_for(10s);
 
     while(true) {
-        cout << "------------------------------------\n";
         b.update();
         b.print();
     }

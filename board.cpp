@@ -4,11 +4,13 @@ Borad file
 This will have helper methods for the board, incl rendering
 
 */
+
 #include "cell.cpp"
 #include "board.h"
 #include <vector>
 #include <string>
 #include <iostream>
+
 #include "include/taskflow/taskflow.hpp"
 
 using namespace std;
@@ -88,6 +90,7 @@ void Board::set_all(bool alive) {
 }
 
 
+/*
 void Board::update() {
     vector<Cell> cells_temp = cells;
 
@@ -96,9 +99,9 @@ void Board::update() {
     }
 
     cells = cells_temp;
-}
+} */
 
-/*
+
 void Board::update() {
     tf::Taskflow taskflow; // Create a taskflow
 
@@ -121,4 +124,4 @@ void Board::update() {
 
     // Move over
     this->cells = cellsTemp;
-}*/
+}

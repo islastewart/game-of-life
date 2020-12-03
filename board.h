@@ -23,6 +23,9 @@ class Board {
         // the game of life.
         void update();
 
+        // Update cudaFlow
+        void cuda_update();
+
         // Get cell at coord, or return null if doesn't exist
         Cell *get_cell(int x, int y);
 

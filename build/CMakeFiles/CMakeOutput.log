@@ -461,3 +461,31 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/isla/Visual Studio Projects/game-of-life/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_861d9/fast && /usr/bin/make -f CMakeFiles/cmTC_861d9.dir/build.make CMakeFiles/cmTC_861d9.dir/build
+make[1]: Entering directory '/home/isla/Visual Studio Projects/game-of-life/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_861d9.dir/CheckIncludeFile.c.o
+/bin/gcc-9    -o CMakeFiles/cmTC_861d9.dir/CheckIncludeFile.c.o   -c "/home/isla/Visual Studio Projects/game-of-life/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c"
+Linking C executable cmTC_861d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_861d9.dir/link.txt --verbose=1
+/bin/gcc-9      -rdynamic CMakeFiles/cmTC_861d9.dir/CheckIncludeFile.c.o  -o cmTC_861d9 
+make[1]: Leaving directory '/home/isla/Visual Studio Projects/game-of-life/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/isla/Visual Studio Projects/game-of-life/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e4a2b/fast && /usr/bin/make -f CMakeFiles/cmTC_e4a2b.dir/build.make CMakeFiles/cmTC_e4a2b.dir/build
+make[1]: Entering directory '/home/isla/Visual Studio Projects/game-of-life/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e4a2b.dir/CheckFunctionExists.c.o
+/bin/gcc-9   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e4a2b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e4a2b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4a2b.dir/link.txt --verbose=1
+/bin/gcc-9  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e4a2b.dir/CheckFunctionExists.c.o  -o cmTC_e4a2b  -lpthread 
+make[1]: Leaving directory '/home/isla/Visual Studio Projects/game-of-life/build/CMakeFiles/CMakeTmp'
+
+
+
